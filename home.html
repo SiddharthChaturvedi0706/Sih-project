@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | KrishiMitra</title>
+    <link rel="stylesheet" href="home.style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo" data-key="appTitle">Farmer's Dashboard</h1>
+            <div class="language-switcher">
+                <label for="language-select" data-key="selectLanguage">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="pa">ਪੰਜਾਬੀ</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="welcome-message" data-key="welcome">Welcome, Farmer!</h2>
+        <p class="tagline" data-key="tagline">Here are your smart farming tools.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="card-header">
+                    <h3 data-key="weatherTitle">Weather Forecast</h3>
+                    <div class="card-icon">🌦️</div>
+                </div>
+                <div id="weather-info">
+                    <p id="weather-loading" data-key="weatherLoading">Loading weather...</p>
+                    <div id="weather-data" class="hidden">
+                        <div class="weather-main">
+                            <img id="weather-icon" src="" alt="Weather icon">
+                            <span id="weather-temp"></span>
+                        </div>
+                        <p id="weather-desc"></p>
+                        <p id="weather-location"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="card-icon">📈</div>
+                <h3 data-key="marketTitle">Market Prices</h3>
+                <p data-key="marketDesc">Track live crop prices from nearby markets.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="card-icon">🌱</div>
+                <h3 data-key="cropTitle">Crop Advisory</h3>
+                <p data-key="cropDesc">Personalized advice on which crops to sow.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="card-icon">📸</div>
+                <h3 data-key="pestTitle">Pest Detection</h3>
+                <p data-key="pestDesc">Upload a photo to identify pests and diseases.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="home.script.js"></script>
+</body>
+</html>
