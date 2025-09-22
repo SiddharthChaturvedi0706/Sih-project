@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Logo Image -->
+        <div class="form-logo">
+            <!-- IMPORTANT: Make sure you have an image named 'my-logo.png' in the same folder -->
+            <img src="my-logo.png" alt="KrishiMitra Logo">
+        </div>
+
+        <!-- Tab Switcher -->
+        <div class="tabs">
+            <button id="registerTab" class="tab active" type="button">Register</button>
+            <button id="loginTab" class="tab" type="button">Login</button>
+        </div>
+
+        <div class="form-header">
+            <h2 id="formTitle">Farmer Registration 🌾</h2>
+            <p id="formSubtitle">Create an account for real-time crop advice.</p>
+        </div>
+
+        <form id="authForm" action="#" method="POST">
+            <div class="input-group" id="nameField">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="input-group">
+                <label for="contact">Mobile Number or Email</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter mobile or email" required>
+            </div>
+
+            <div class="input-group" id="landholdingField">
+                <label for="landholding">Landholding (in Acres)</label>
+                <select id="landholding" name="landholding">
+                    <option value="" disabled selected>Select your land size</option>
+                    <option value="1-2">1 - 2 Acres</option>
+                    <option value="3-5">3 - 5 Acres</option>
+                    <option value="6-10">6 - 10 Acres</option>
+                    <option value="10+">More than 10 Acres</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="soilTypeField">
+                <label for="soil_type">Primary Soil Type</label>
+                <select id="soil_type" name="soil_type">
+                    <option value="" disabled selected>Select your soil type</option>
+                    <option value="alluvial">Alluvial Soil</option>
+                    <option value="black">Black Soil</option>
+                    <option value="red">Red Soil</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn-otp" id="getOtpButton">Get OTP</button>
+
+            <div class="input-group hidden" id="otpField">
+                <label for="otp">Enter OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter any 6-digit OTP" pattern="[0-9]{6}">
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitButton">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
